@@ -1,0 +1,41 @@
+
+nav{
+    background-color: white;
+}
+#navbartoogle a:hover{
+    color: olive;
+}
+section{
+    /* height: 30em; */
+    padding-top: 10vh;
+    padding-bottom: 20vh;
+}
+section h2{
+    padding-bottom: 1em;
+}
+#hero{
+    padding-top: 40vh;
+    text-align: left;
+}
+.row ,.col-sm ,.col-md{
+    margin-bottom: 1em;
+}
+.col-md .row a{
+    color: white;
+}
+form input,button{
+    height: 3em;
+    border-radius: 10px 10px;
+    border: 1.5px solid gray;
+}
+textarea{
+    border-radius: 10px 10px;
+    border: 1.5px solid gray;
+}
+#about .card ,#contact .card{
+    border: none;
+}
+footer a{
+    color: white;
+    text-underline-offset: unset;
+}
