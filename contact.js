@@ -1,17 +1,20 @@
-const form = document.getElementById("form");
-form.addEventListener("submit", formSubmit);
+  document.getElementById('contactForm').addEventListener('submit', async function (event) {
+    event.preventDefault();
 
-function formSubmit(e) {
-    e.preventDefault();
-    const formData = new FormData(e.target);
+    const formData = new FormData(event.target);
+    console.log(JSON.stringify(Object.fromEntries(formData.entries())))
+    // Send data to the serverless function
+    const response = await fetch('/.netlify/functions/sendEmail', {
+      method: 'POST',
+      body: JSON.stringify(Object.fromEntries(formData.entries())),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
 
-    fetch("https://getform.io/f/anlerwea", {
-        method: "POST",
-        body: formData,
-        headers: {
-            "Accept": "application/json",
-        },
-    })
-    .then(response => console.log(response))
-    .catch(error => console.log(error))
-}
+    if (response.ok) {
+      alert('Email sent successfully!');
+    } else {
+      alert('Error sending email.');
+    }
+  });
