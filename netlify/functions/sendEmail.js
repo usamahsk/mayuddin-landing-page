@@ -1,3 +1,4 @@
+require('dotenv').config()
 const nodemailer = require('nodemailer');
 const { google } = require('googleapis');
 
@@ -13,9 +14,10 @@ const oAuth2Client = new google.auth.OAuth2(
   CLIENT_SECRET,
   REDIRECT_URI
 );
+console.log(process.env.CLIENT_ID)
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
-async function sendMail(name, email, message) {
+async function sendMail(phone, email, message) {
   try {
     const accessToken = await oAuth2Client.getAccessToken();
 
@@ -34,8 +36,8 @@ async function sendMail(name, email, message) {
     const mailOptions = {
       from: `Your Website <${USER_EMAIL}>`,
       to: USER_EMAIL,
-      subject: `New message from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      subject: `New message from ${email}`,
+      text: `phone: ${phone}\nEmail: ${email}\nMessage: ${message}`,
     };
 
     const result = await transporter.sendMail(mailOptions);
@@ -47,13 +49,14 @@ async function sendMail(name, email, message) {
 
 exports.handler = async (event) => {
   try {
-    const { name, email, message } = JSON.parse(event.body);
-    const result = await sendMail(name, email, message);
+    const { phone, email, message } = JSON.parse(event.body);
+    const result = await sendMail(phone, email, message);
     return {
       statusCode: 200,
       body: JSON.stringify({ status: 'Email sent', result }),
     };
   } catch (error) {
+    console.log(error)
     return {
       statusCode: 500,
       body: JSON.stringify({ status: 'Failed to send email', error: error.message }),
