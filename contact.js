@@ -8,7 +8,6 @@ navLinks.forEach((l) => {
 document.getElementById('contactForm').addEventListener('submit', async function (event) {
   event.preventDefault();
   document.getElementById('submitBtn').setAttribute('disabled', true)
-  doc
   const formData = new FormData(event.target);
   // Send data to the serverless function
 
