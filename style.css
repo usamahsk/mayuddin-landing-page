@@ -1,41 +1,78 @@
-
-nav{
+nav {
     background-color: white;
 }
-#navbartoogle a:hover{
+
+#navbarSupportedContent a:hover {
     color: olive;
 }
-section{
+
+section {
     /* height: 30em; */
-    padding-top: 10vh;
+    padding-top: 20vh;
     padding-bottom: 20vh;
 }
-section h2{
+
+section h2 {
     padding-bottom: 1em;
 }
-#hero{
+
+#hero {
     padding-top: 40vh;
     text-align: left;
 }
-.row ,.col-sm ,.col-md{
+
+#contact div {
+    text-align: left;
+}
+
+.row,
+.col-sm,
+.col-md {
     margin-bottom: 1em;
 }
-.col-md .row a{
+
+.col-md .row a {
     color: white;
 }
-form input,button{
+
+form input,footer input,
+button {
     height: 3em;
     border-radius: 10px 10px;
     border: 1.5px solid gray;
 }
-textarea{
+
+textarea {
     border-radius: 10px 10px;
     border: 1.5px solid gray;
 }
-#about .card ,#contact .card{
+
+#about .card,
+#contact .card {
     border: none;
 }
-footer a{
+
+.secondary-btn {
+    border: 1px solid rgb(148, 138, 138);
+    border-radius: 15px 15px;
+    height: 3em;
+    width: 100%;
+    color: black;
+}
+
+.primary-btn {
     color: white;
-    text-underline-offset: unset;
+    background-color: olive;
+    border: 1px grey;
+    border-radius: 15px 15px;
+    height: 3em;
+    width: 100%
+}
+.primary-btn:disabled{
+    background-color: rgb(219, 219, 158);
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }

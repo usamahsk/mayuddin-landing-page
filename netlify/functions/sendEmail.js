@@ -14,7 +14,6 @@ const oAuth2Client = new google.auth.OAuth2(
   CLIENT_SECRET,
   REDIRECT_URI
 );
-console.log(process.env.CLIENT_ID)
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
 async function sendMail(phone, email, message) {

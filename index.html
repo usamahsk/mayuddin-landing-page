@@ -12,47 +12,58 @@
 <html>
 
 <body>
-    <header id="header">
-        <div class="container-fluid text-center fixed-top" id="navbar-collapse">
-            <nav class="navbar navbar-expand-lg">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbartoogle"
-                    aria-controls="navbartoogle" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbartoogle">
-                    <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#hero">Home</a>
-                    <a class="flex-sm-fill text-sm-center nav-link" href="#service">Service</a>
-                    <a class="flex-sm-fill text-sm-center nav-link" href="#about">About Us</a>
-                    <a class="flex-sm-fill text-sm-center nav-link" href="#contact">Contact Us</a>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <div class="container text-center">
+        <header id="header">
+            <div class="container text-center fixed-top" id="navbar-collapse">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container">
+                        <a class="navbar-brand" href="#">Mayu Tax Consultant</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#hero">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#service">Service</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">About us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div id="top"></div>
+            </div>
+        </header>
 
-    <main id="main">
-        <div class="container text-center">
+        <main id="main">
             <section id="hero">
                 <div class="row">
                     <div class="col-md">
                         <h1>We are your legal hands</h1>
-                        <h3>Now run your business without hustling of texas</h3>
+                        <h3>Now run your business without hustling of taxes</h3>
 
                     </div>
                     <div class="col-md">
                         <div class="row">
                             <div class="col-sm">
                                 <a href="#contact" style="color: white">
-                                    <button
-                                        style="border: 1px solid rgb(148, 138, 138) ;border-radius: 15px 15px; height:3em;width: 100%;">
-                                        Chat With us
+                                    <button class="secondary-btn"> Chat With us
                                     </button>
                                 </a>
                             </div>
                             <div class="col-sm">
-                                <a href="#service" style="color: white">
-                                    <button class=""
-                                        style="background-color:olive ;color:white ;border: 1px grey ;border-radius: 15px 15px;height:3em;width: 100%;">
-                                        See Our Services
+                                <a href="#service">
+                                    <button class="primary-btn">See Our Services
                                     </button>
                                 </a>
                             </div>
@@ -159,67 +170,62 @@
                     <div class="col-md">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Ahmedabad</h4>
+                                <h5 class="card-title">Ahmedabad</h5>
                                 <p class="card-text text-body-secondary">101 ,1st floor ,prism classic
                                     Laldarwaja,Opp lal darwaja
                                     Ahmedabad 400987,Gujarat,India.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Mumbai</h4>
+                                <h5 class="card-title">Mumbai</h5>
                                 <p class="card-text text-body-secondary">1st Floor, Below JVLR Bridge,Station
                                     road,Jogeshwari west,Mumbai 400102,India.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Contact details</h4>
                                 <p>Phone: <span class="card-text text-body-secondary">+91 9967845678</span></p>
-                                <p>Email: <span class="card-text text-body-secondary">mayutaxconsu@gmail.com</span></p>
+                                <p>Email: <span class="card-text text-body-secondary">mayutaxconsu@gmail.com</span></p>    
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="row">
                     <div class="col-md">
                         <div class="card" style="width: auto">
-                            <div class="card-body">
-                                <h4 class="card-title">Get In Touch With us</h4>
+                            <div class="card-body" id="card-form">
+                                <h4 class="card-title">Get in touch with us.</h4>
 
                                 <form id="contactForm" method="POST">
                                     <div class="col">
                                         <div class="row">
-                                            <input type="email" name="email" placeholder="Email">
+                                            <input type="email" id="email" name="email" placeholder="Email">
                                         </div>
                                         <div class="row">
 
-                                            <input type="tel" name="phone" placeholder="Phone">
+                                            <input type="tel" id="phone" name="phone" placeholder="Phone">
                                         </div>
                                         <div class="row">
-                                            <textarea rows="4" name="message" placeholder="Message"></textarea>
+                                            <textarea rows="4" id="message" name="message"
+                                                placeholder="Message"></textarea>
                                         </div>
                                         <div class="row">
-                                            <button type="submit">Submit</button>
+                                            <button type="submit" id="submitBtn" class="primary-btn">Submit</button>
                                         </div>
+                                        <div>&nbsp;</div>
+
+                                        <!-- <h5 style="text-align: center;">or</h5> -->
+                                      
+                                    </div>
 
                                     </div>
                                 </form>
-
+                                <div class="row">
+                                    <a  href="https://wa.me/+91996785090?text=Hello,%20I%20need%20more%20information" target="_blank">
+                                        <button class="secondary-btn">
+                                            Chat with us on Whatsapp.
+                                        </button>
+                                    </a>
+                                    </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </section>
-
-        </div>
-
+    </div>
+    <div class="container-fluid">
         <footer style="align-items:center;background-color: olive;color: white;">
+
             <div class="row" style="padding: 2em;">
                 <div class="col-md">
                     <h5>
@@ -247,20 +253,23 @@
                 </div>
                 <div class="col-md">
                     <div class="row">
-                        <div class="col-md-6">
                             <input type="text" placeholder="Email">
-                        </div>
-                        <div class="col-md">
-                            <input type="button" value="Subscribe">
-
-                        </div>
                     </div>
+                    <div class="col-md">
+                        <div class="row">
+                            <div class="col-md-6">
+                            </div>
+                            <div class="col-md">
+                                <input type="button" class="secondary-btn" value="Subscribe">
+                            </div>
+                        </div>
 
                 </div>
             </div>
         </footer>
-        <div class="text-center">copyright @2019</div>
-    </main>
+        <div class="text-center">copyright@2024@MayuTaxConsultant</div>
+        </main>
+    </div>
 
 
 
